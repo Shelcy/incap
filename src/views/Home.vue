@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="">
+    <div class="morchis">
+    </div>
+
+    <IniciarSesion></IniciarSesion>
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  // @ is an alias to /src
+  import IniciarSesion from '../components/IniciarSesion.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  export default {
+    name: 'Home',
+    components: {
+      IniciarSesion,
+    }
   }
-}
 </script>
+<style scoped>
+  .morchis {
+    width: 100%;
+    height: 300px;
+    background-color: yellow;
+  }
+</style>
