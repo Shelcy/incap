@@ -13,6 +13,7 @@ botonAnadir.forEach(addToCartButton => {
 const botonComprar = document.querySelector('.botonComprar')
 botonComprar.addEventListener('click', comprar)
 
+
 const cursosComprados = document.querySelector('.cursosComprados')
 
 
@@ -28,30 +29,74 @@ function agregarCursoCarro(event) {
     const precioCurso = programa.querySelector('.precioCurso').textContent
     const imagenCurso = programa.querySelector('.imagenCurso').src
     const horarioDia  = programa.querySelector('.horarioDia').textContent
+    const horarioHora = programa.querySelector('.horarioHora').textContent
     // console.log(typeof(horarioDia))
+    console.log(typeof(horarioDia), horarioHora)
     
-    productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia);
+    productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia, horarioHora);
 }
+var horario = [['', '', '', ''], ['', '', '', ''],['', '', '', ''], ['', '', '', ''],['', '', '', ''], ['', '', '', '']]
+
+function productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia, horarioHora) {
+    console.log(tituloCurso, precioCurso, imagenCurso, horarioDia, horarioHora)
+    const horariosHora = cursosComprados.getElementsByClassName('horaCursoComprado')    
+
+    horarioHoras = horarioHora.split('A')
+    console.log(horarioHoras)
+
+    let dia  = horarioHoras[0]
+    let hora = horarioHoras[1]
+    console.log(dia, hora)
 
 
-function productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia) {
-    console.log(tituloCurso, precioCurso, imagenCurso, horarioDia)
-
-    const titulosCursoComprado = cursosComprados.getElementsByClassName('tituloCursoComprado')
-    // console.log(horariosDiaComprado)
     
+    const titulosCursoComprado = cursosComprados.getElementsByClassName('tituloCursoComprado')
+    console.log(horariosHora)  
+    
+
+
+    for (let i = 0; i < horariosHora.length; i++) {
+    
+        if(horariosHora[i].innerText === horario[dia][hora]  ){
+                
+            console.log('verifique su horario' , horario)
+            return;
+    
+        }else{
+            horario[dia].splice(hora, 1 , horariosHora[i].innerText)
+            console.log('No encontro y se agrego',  horario, horariosHora[i].innerText)
+        }
+
+       
+        
+    }
+
+for(let i = 0; i < titulosCursoComprado.length; i++){
+    console.log(horario, horario[dia][hora] , horariosHora[i].textContent, horariosHora[i].innerText)
+
+    // if((horariosHora[i].textContent == horario[dia][hora]) && (horario[dia][hora] !== '')){
+    //     console.log('Revisa tu horario', horario[dia][hora], horario)
+    //     return;
+    // }else{
+    //     horario.splice(horario[dia][hora]-1, 1, horariosHora[i].innerText ) 
+    //     console.log(horario, 'se agrego')
+    // }
+
+    
+    
+      
+    if((titulosCursoComprado[i].innerText === tituloCurso)  && (horariosHora[i].innerText == horario[dia][hora])){
+        alert('El curso ya se encuentra en el carrito de compras')
+        precioCurso = 0
+        return;
+    }
 
    
 
 
-    for(let i = 0; i < titulosCursoComprado.length; i++){
-        
-        if(titulosCursoComprado[i].innerText === tituloCurso ){
-            alert('El curso ya se encuentra en el carrito de compras')
-            precioCurso = 0
-            return;
-        }
-    }
+   
+}
+    
 
 
     const contenedorCarro = document.createElement('div')
@@ -67,6 +112,7 @@ function productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia) {
         <div class="col-4 ">
             <div class="align-items-center h-100 border-bottom  pt-3">
                 <p class=" mb-0 ">${horarioDia}</p>
+                <p class=" mb-0 horaCursoComprado">${horarioHora}</p> 
                 <p class=" mb-0 precioCursoCarro">${precioCurso}</p>      
             </div>    
         </div> 

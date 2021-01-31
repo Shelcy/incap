@@ -17,7 +17,7 @@
                                 <p class="card-text text-justify">{{curso.descripcion}}</p>
                                 <p class="horarioDia">{{curso.dia}}</p>
                                 <!-- <p class="horarioHora" v-bind:value="curso.hora">  6:00 Pm - 8:00 PM</p> -->
-                                <p >Codigo: <span class="horarioHora">0A1</span>  </p>  
+                                <p >Codigo: <span class="horarioHora">8A0</span></p>  
 
                                 <h4 class="precioCurso">{{curso.valor}}</h4>
 
@@ -46,7 +46,7 @@
                        <p class="card-text text-justify">{{curso.descripcion}}</p>
                                 <p class="horarioDia">{{curso.dia}}</p>
                                 <!-- <p class="horarioHora" v-bind:value="curso.hora">  6:00 Pm - 8:00 PM</p> -->
-                                <p >Codigo: <span class="horarioHora">0A1</span>  </p>  
+                                <p >Codigo: <span class="horarioHora">{{curso.hora}}</span></p>  
 
                                 <h4 class="precioCurso">{{curso.valor}}</h4>
 
@@ -71,30 +71,65 @@
                 cursoSincrono: [{
                         nombre: "Sincrono1",
                         descripcion: "tururururru",
+                        dia:"lunes",
+                        hora:'0A1'
+
                        
                     },
                     {
                         nombre: "Sincrono2",
                         descripcion: "tururururru",
                         valor: "$19.500",
+                        dia:"Martes",
+                        hora:'1A1'
                         
                     },
                     {
                         nombre: "Sincrono3",
                         descripcion: "tururururru",
                         valor: "$19.500",
+                        dia:"lunes",
+                        hora:'0A1'
                       
                     },
                     {
                         nombre: "Sincrono4",
                         descripcion: "tururururru",
                         valor: "$19.500",
+                        dia:"Viernes",
+                        hora:'4A2'
                         
                     },
                     {
                         nombre: "Sincrono5",
                         descripcion: "tururururru",
                         valor: "$19.500",
+                        dia:"Viernes",
+                        hora:'4A1'
+                     
+                    },
+                    {
+                        nombre: "Sincrono6",
+                        descripcion: "tururururru",
+                        valor: "$19.500",
+                        dia:"Viernes",
+                        hora:'4A1'
+                     
+                    },
+                     {
+                        nombre: "Sincrono7",
+                        descripcion: "tururururru",
+                        valor: "$19.500",
+                        dia:"Viernes",
+                        hora:'0A1'
+                     
+                    },
+                    {
+                        nombre: "Sincrono6",
+                        descripcion: "tururururru",
+                        valor: "$19.500",
+                        dia:"Viernes",
+                        hora:'4A1'
                      
                     },
                 ],
@@ -102,16 +137,11 @@
                         nombre: "Asincrono1",
                         descripcion: "tururururru",
                         valor: "$19.500",
-                        dia:"lunes",
-                        hora:'1'
                     },
                     {
                         nombre: "Asincrono2",
                         descripcion: "tururururru",
-                        
                          valor: "$500.000",
-                        dia:"lunes",
-                        hora:'2'
                     },
                     {
                         nombre: "Asincrono3",
