@@ -25,15 +25,15 @@
     <!-- Fin Productos en carrito-->
 
     <!-- TODO Opción comprar -->
-    <div class="row">
+    <div class="row ">
         
-            <div class="d-flex align-items-center" >
-                <p class="m-0 col-md-2 ">Total</p>
-                <p class="ml-4 mb-0 valorCompraTotal">$0</p>
+        <div class="d-flex align-items-center" >
+            <p class="m-0 col-md-2 ">Total</p>
+            <p class="ml-4 mb-0 valorCompraTotal">$0</p>
                 
-                <button class="btn col-md-4 btn-success ml-auto botonComprar" type="button" data-toggle="modal"
-                    data-target="#comprarModal">Comprar</button>
-            </div>
+            <button class="btn col-md-4 btn-success ml-auto botonComprar" type="submit" data-toggle="modal"
+                data-target="#comprarModal">Comprar</button>
+        </div>
         
     </div>
     <!-- TODO Fin Opción comprar -->
@@ -61,6 +61,12 @@
 
                     </div>
                 </div>
+
+
+
+
+
+
                 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary col-md-3" data-dismiss="modal">Cerrar</button>

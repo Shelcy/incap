@@ -48,55 +48,63 @@ function productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia, hora
     let hora = horarioHoras[1]
     console.log(dia, hora)
 
-
-    
     const titulosCursoComprado = cursosComprados.getElementsByClassName('tituloCursoComprado')
     console.log(horariosHora)  
-    
 
 
-    for (let i = 0; i < horariosHora.length; i++) {
-    
-        if(horariosHora[i].innerText === horario[dia][hora]  ){
-                
-            console.log('verifique su horario' , horario)
-            return;
-    
-        }else{
-            horario[dia].splice(hora, 1 , horariosHora[i].innerText)
-            console.log('No encontro y se agrego',  horario, horariosHora[i].innerText)
-        }
-
-       
+// TODO Horario V.2
+for(let j = 0; j < titulosCursoComprado.length; j++){
+        // console.log(horario, horario[dia][hora] , horariosHora[i].textContent, horariosHora[i].innerText)
+        // && (horariosHora[j].innerText == horario[dia][hora])
         
+        
+        if((titulosCursoComprado[j].innerText === tituloCurso) ){
+            alert('El curso ya se encuentra en el carrito de compras')
+            precioCurso = 0
+            return;
+        // }else {
+        //     console.log(horariosHora , ': HoraiosHora')
+        //     for(i = 0; i<= horariosHora.length; i++){
+        
+        //         console.log(horariosHora[i].innerHTML, 'entrando')
+        //         if(horario[dia].includes(horariosHora[i].innerHTML)){
+        //             alert('Cruce horario')
+        //             return; 
+        //         }
+            // horariosHora[i] == horario[dia][hora]                 
+            // }
+        }
+        // console.log(horario.include(horariosHora.innerText), 'asdfguilolkjhgf')
     }
 
-for(let i = 0; i < titulosCursoComprado.length; i++){
-    console.log(horario, horario[dia][hora] , horariosHora[i].textContent, horariosHora[i].innerText)
 
-    // if((horariosHora[i].textContent == horario[dia][hora]) && (horario[dia][hora] !== '')){
-    //     console.log('Revisa tu horario', horario[dia][hora], horario)
-    //     return;
-    // }else{
-    //     horario.splice(horario[dia][hora]-1, 1, horariosHora[i].innerText ) 
-    //     console.log(horario, 'se agrego')
+    
+    //   TODO Horario V.1
+    // for(let j = 0; j < titulosCursoComprado.length; j++){
+    //     // console.log(horario, horario[dia][hora] , horariosHora[i].textContent, horariosHora[i].innerText)
+    //     // && (horariosHora[j].innerText == horario[dia][hora])
+    //     if((titulosCursoComprado[j].innerText === tituloCurso) ){
+    //         alert('El curso ya se encuentra en el carrito de compras')
+    //         precioCurso = 0
+    //         return;
+    //     }
+    
+    //     for (let i = 0; i < horariosHora.length; i++) {
+    
+    //         if(horariosHora[i].innerText === horario[dia][hora]){
+                    
+    //             console.log('verifique su horario' , horario)
+    //             return;
+        
+    //         }else{
+    //             horario[dia].splice(hora, 1 , horariosHora[i].innerText)
+    //             console.log('No encontro y se agrego',  horario, horariosHora[i].innerText)
+    //         }
+            
+           
+    
+    //     }
     // }
-
-    
-    
-      
-    if((titulosCursoComprado[i].innerText === tituloCurso)  && (horariosHora[i].innerText == horario[dia][hora])){
-        alert('El curso ya se encuentra en el carrito de compras')
-        precioCurso = 0
-        return;
-    }
-
-   
-
-
-   
-}
-    
 
 
     const contenedorCarro = document.createElement('div')
@@ -192,13 +200,23 @@ function contarCurso(event){
     } 
 }
 
-function comprar(){
 
+
+function comprar() {
     
+     
+        cursosComprados.innerHTML = ''
+        precioTotalCompra();
 
-    cursosComprados.innerHTML = ''
-    precioTotalCompra();
 }
+
+
+
+
+
+
+
+
 
 
 

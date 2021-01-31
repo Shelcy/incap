@@ -106,32 +106,34 @@
                                             </div>
                                             <div class="row p-2">
                                                 <div class="group  ml-5">
-                                                    <div class="form-check">
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" name="terminos"
                                                             id="terminos" required>
                                                         <label class="form-check-label" for="terminos">Acepto términos y
                                                             condiciones</label>
                                                         <!-- <div class="invalid-feedback">Debe de Aceptar los términos y condiciones.</div> -->
                                                     </div>
-                                                </div>
-                                            </div>
-
-
-                                    <div class="row">
-                                        <button type="button"
-                                            class="btn btn-danger col-md-4 offset-md-2  col-sm-6 offset-sm-3 my-1"
-                                            data-dismiss="modal">
-                                            Cancelar </button>
+                                                <button type="button"
+                                                    class="btn btn-danger col-md-4 offset-md-2  col-sm-6 offset-sm-3 my-1"
+                                                    data-dismiss="modal">Cancelar 
+                                                </button>
                                         
-                                       
+                                    
 
-                                        <button title="Enviar"
-                                            class="btn btn-success col-md-4 offset-md-1  col-sm-6 offset-sm-3 my-1"
-                                            type="submit"> Entrar </button> 
-                                        <!-- <div class="valid-feedback" id="formularioLleno">enviadooooooooooooooo</div>
-                                             <div class="invalid-feedback" id="formularioNoLleno">La contraseña no coincide</div> -->
+                                                <button title="Enviar"
+                                                    class="btn btn-success col-md-4 offset-md-1  col-sm-6 offset-sm-3 my-1"
+                                                    type="submit"> Entrar 
+                                                </button> 
+                                                <!-- <div class="valid-feedback" id="formularioLleno">enviadooooooooooooooo</div>
+                                                    <div class="invalid-feedback" id="formularioNoLleno">La contraseña no coincide</div> -->
 
-                                    </div>
+                                            </div>
                                         </form>
 
 
