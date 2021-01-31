@@ -58,30 +58,22 @@ function productoEnCarro(tituloCurso, precioCurso, imagenCurso, horarioDia) {
 
     const contenidoCarro = `
     <div class="row contenedorCursosCarro">
-        <div class="col-4">
-            <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                <img src=${imagenCurso} class="shopping-cart-image">
-                <h6 class="shopping-cart-item-title tituloCursoComprado text-truncate ml-3 mb-0">${tituloCurso}</h6>
+        <div class="col-md-5">
+            <div class=" align-items-center h-100 border-bottom pb-2 pt-3">
+                <h6 class=" tituloCursoComprado mb-0">${tituloCurso}</h6>
+                <img src=${imagenCurso} class="imagenCarritoCompra">
             </div>
         </div>
-        <div class="col-2">
-        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <p class="item-price mb-0 ">${horarioDia}</p>
-                     
-        </div>
-        
-    </div>
-        <div class="col-2">
-            <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-                <p class="item-price mb-0 precioCursoCarro">${precioCurso}</p>
-            </div>
-        </div>
-        <div class="col-2">
-            <div
-                class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                <input class="shopping-cart-quantity-input unidadesCurso" type="number"
-                    value="1">
-                <button class="btn btn-danger botonEliminar" type="button">X</button>
+        <div class="col-4 ">
+            <div class="align-items-center h-100 border-bottom  pt-3">
+                <p class=" mb-0 ">${horarioDia}</p>
+                <p class=" mb-0 precioCursoCarro">${precioCurso}</p>      
+            </div>    
+        </div> 
+        <div class="col-3 ">
+            <div class="d-flex p-0 justify-content-around align-items-center h-100 border-bottom ">
+                <input class=" p-1 unidadesCurso" type="number" value="1">
+                <button class=" p-1 btn btn-danger botonEliminar" type="button">X</button>
             </div>
         </div>
     </div>

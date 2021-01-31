@@ -1,54 +1,45 @@
 <template>
-    <div class="col-sm-12 border border-secondary ">
-        <h1 class="text-center">CARRITO</h1>
+    <div class="col-sm-12 border border-secondary bg-light ">
+        <!-- TODO Opciones en carrito -->
+        <h1 class="text-center font-weight-bold">CARRITO</h1>
         <hr>
-        <div class="row">
-            <div class="col-5">
-                
-                    <h6>Producto</h6>
-                    <hr>
-               
+        <div class="row m-1">
+            <div class="col-5  ">
+                <p class="text-truncate ">Producto</p>
+                <hr>
             </div>
             
-             
-            <div class="col-4">
-                
-                    <h6 class="text-truncate">Descripción</h6>
-                    <hr>
-             
+            <div class="col-4 ">    
+                <h6 class="text-truncate ">Descripción</h6>
+                <hr>
             </div>
             <div class="col-3">
-               
-                    <h6>Cantidad</h6>
-                    <hr>
-                
+                <p class="text-truncate ">Cantidad</p>
+                <hr>
             </div>
         </div>
-        <!-- ? START SHOPPING CART ITEMS -->
+        <!-- Fin opciones en carrito -->
+        <!-- TODO Productos en carrito -->
         <div class="col-md-12 cursosComprados">
         </div>
-    <!-- ? END SHOPPING CART ITEMS -->
+    <!-- Fin Productos en carrito-->
 
-    <!-- START TOTAL -->
+    <!-- TODO Opción comprar -->
     <div class="row">
         
             <div class="d-flex align-items-center" >
                 <p class="m-0 col-md-2 ">Total</p>
                 <p class="ml-4 mb-0 valorCompraTotal">$0</p>
                 
-                <button class="btn col-md-3 btn-success ml-auto botonComprar" type="button" data-toggle="modal"
+                <button class="btn col-md-4 btn-success ml-auto botonComprar" type="button" data-toggle="modal"
                     data-target="#comprarModal">Comprar</button>
             </div>
         
     </div>
-
-    <!-- END TOTAL -->
-
+    <!-- TODO Fin Opción comprar -->
 
 
-    
-
-    <!-- START MODAL COMPRA -->
+    <!--TODO Facturación -->
     <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -72,16 +63,12 @@
                 </div>
                 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary col-md-3" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END MODAL COMPRA -->
-
-
-
-
+    <!-- Fin Facturación -->
     </div>
 </template>
 
@@ -95,21 +82,22 @@
 
 .imagenCarritoCompra{
     width:50%;
-    height: 50px;
+    height: 60px;
     border-radius: 4%;
 }
-.inputNumero {
-  width: 50px; 
+.unidadesCurso {
+  width: 40px;
   border: 1px solid rgb(176, 204, 19);
   border-radius: 5px;
   background: #eee;
   
 }
 
-.shopping-cart-total {
-  min-height: 96px;
-  background-color: palevioletred;
-} 
+.botonEliminar{
+    width:100%;
+    
+}
+
 
 
 </style>
